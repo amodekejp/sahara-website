@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: rgb(40,44,52);
+  gap: 1rem;
+}
+
+/* The name  */
+.name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  animation: lights 5s 750ms linear infinite;
+}
+
+/* The Welcome text */
+.home_header {
+  color:rgb(249,161,9);
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+span {
+  text-shadow: 0 0 7px rgba(235, 230, 230, 0.3), 0 0 3px rgba(243, 239, 239, 0.3);
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+  margin-top: 28px;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+/* welcome text ends */
+
+/* The main name animation */
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+}
+
+/* The main name animation ends */
+
+/* The shining text  animation   */
+small {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(249,161,9), #e21b1b, rgb(249,161,9));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+/* The shining text  animation ends */
+
+
+/* mobile view  */
+
+@media screen and (max-width: 768px) {
+
+  .home {
+    padding: 2%;
+  }
+
+  .main-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+.main-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* margin-right: 1rem; */
+}
+
+  .name {
+    font-size: 30px;
+  }
+  .home_header {
+    font-size: 16px;
+    flex-direction: column;
+  }
+  .animation {
+  display: none;
+  }
+  small {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    letter-spacing: 0;
+  }
+
+  #home-btn-container {
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+
+  .welcome {
+  font-size: 16px;
+  text-shadow: 0 0 10px rgba(240, 17, 17, 0.5);
+  animation: blur-to-visible 5s linear forwards;
+  }
+
+  @keyframes blur-to-visible {
+    0% {
+      opacity: 0;
+      text-shadow: 0 0 10px rgba(201, 181, 181, 0.5);
+    }
+    50% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 10px rgba(146, 131, 131, 0.5);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .main-logo {
+      animation: main-logo-spin infinite 20s linear;
+    }
+  }
+
+  /* @keyframes main-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+}
+
+/* mobile view ends */
+
+/* tablet view  */
+
+@media only screen and (min-width: 769px) and (max-width: 1099px) {
+  .home_header {
+   font-size: 20px;
+  }
+
+  small {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    letter-spacing: 0;
+  }
+}
+
