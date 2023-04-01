@@ -30,7 +30,7 @@ const Home = () => {
         <h2 className="name font-mono">SAHARA</h2>
       </div>
       <div className="home_body">
-        <small>Don't Be Afraid to Take A bold step!</small>
+        <small>FOOD FOR EVERY MOOD!</small>
       </div>
       <div
         className="flex flex-row justify-between gap-4"
